@@ -1,0 +1,69 @@
+2017-05-12 09:59:05 [scrapy] INFO: Scrapy 1.1.2 started (bot: sina_news_spider)
+2017-05-12 09:59:05 [scrapy] INFO: Overridden settings: {'CONCURRENT_REQUESTS': 5000, 'AUTOTHROTTLE_START_DELAY': 0.25, 'CONCURRENT_ITEMS': 3000, 'NEWSPIDER_MODULE': 'sina_news_spider.spiders', 'COOKIES_ENABLED': False, 'USER_AGENT': '', 'LOG_FILE': 'quotes.log', 'SPIDER_MODULES': ['sina_news_spider.spiders'], 'AUTOTHROTTLE_ENABLED': True, 'BOT_NAME': 'sina_news_spider', 'ROBOTSTXT_OBEY': True, 'LOG_LEVEL': 'INFO', 'AUTOTHROTTLE_TARGET_CONCURRENCY': 10.0}
+2017-05-12 09:59:05 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2017-05-12 09:59:05 [py.warnings] WARNING: C:\Python34\lib\site-packages\scrapy\utils\deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2017-05-12 09:59:05 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'sina_news_spider.middlewares.rotate_useragent.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-05-12 09:59:05 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-05-12 09:59:05 [scrapy] INFO: Enabled item pipelines:
+['sina_news_spider.pipelines.SaveMysqlPipeline']
+2017-05-12 09:59:05 [scrapy] INFO: Spider opened
+2017-05-12 09:59:05 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-05-12 09:59:05 [py.warnings] WARNING: C:\Python34\lib\site-packages\scrapy\core\downloader\__init__.py:65: UserWarning: SinaSpider.DOWNLOAD_DELAY attribute is deprecated, use SinaSpider.download_delay instead
+  (type(spider).__name__, type(spider).__name__))
+
+2017-05-12 09:59:38 [scrapy] ERROR: Spider error processing <GET http://slide.mil.news.sina.com.cn/l/slide_8_199_47707.html> (referer: http://news.sina.com.cn/)
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Python34\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Python34\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Python34\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Python34\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Python34\lib\site-packages\scrapy\spiders\crawl.py", line 72, in _parse_response
+    cb_res = callback(response, **cb_kwargs) or ()
+  File "D:/project/spiderProject/sina_news_spider\sina_news_spider\spiders\spider.py", line 89, in parse_article
+    raise AttributeError(response.url)
+AttributeError: http://slide.mil.news.sina.com.cn/l/slide_8_199_47707.html
+2017-05-12 09:59:47 [scrapy] ERROR: Spider error processing <GET http://slide.news.sina.com.cn/x/slide_1_64237_118446.html> (referer: http://news.sina.com.cn/)
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Python34\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Python34\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Python34\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Python34\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Python34\lib\site-packages\scrapy\spiders\crawl.py", line 72, in _parse_response
+    cb_res = callback(response, **cb_kwargs) or ()
+  File "D:/project/spiderProject/sina_news_spider\sina_news_spider\spiders\spider.py", line 89, in parse_article
+    raise AttributeError(response.url)
+AttributeError: http://slide.news.sina.com.cn/x/slide_1_64237_118446.html

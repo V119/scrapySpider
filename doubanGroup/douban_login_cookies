@@ -1,0 +1,5 @@
+#LWP-Cookies-2.0
+Set-Cookie3: bid=t_0W59cRYsk; path="/"; domain=".douban.com"; path_spec; domain_dot; expires="2018-04-04 15:16:16Z"; version=0
+Set-Cookie3: ck="tv-V"; path="/"; domain=".douban.com"; path_spec; domain_dot; discard; version=0
+Set-Cookie3: dbcl2="\"159718258:u6wuY5U7pBw\""; path="/"; domain=".douban.com"; path_spec; domain_dot; discard; httponly=None; version=0
+Set-Cookie3: ue="\"yanghaov119@126.com\""; path="/"; domain=".douban.com"; domain_dot; expires="2018-04-04 15:16:16Z"; httponly=None; version=0
